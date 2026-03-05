@@ -1033,15 +1033,15 @@
   #define DEFAULT_SEGMENTS_PER_SECOND 200
 
   // After homing move down to a height where XY movement is unconstrained
-  //#define DELTA_HOME_TO_SAFE_ZONE
+  #define DELTA_HOME_TO_SAFE_ZONE
 
   // Delta calibration menu
   // Add three-point calibration to the MarlinUI menu.
   // See http://minow.blogspot.com/index.html#4918805519571907051
-  //#define DELTA_CALIBRATION_MENU
+  #define DELTA_CALIBRATION_MENU
 
   // G33 Delta Auto-Calibration. Enable EEPROM_SETTINGS to store results.
-  //#define DELTA_AUTO_CALIBRATION
+  #define DELTA_AUTO_CALIBRATION
 
   #if ENABLED(DELTA_AUTO_CALIBRATION)
     // Default number of probe points : n*n (1 -> 7)
@@ -1057,7 +1057,7 @@
   #define PRINTABLE_RADIUS       90.0     // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 215.0        // (mm)
+  #define DELTA_DIAGONAL_ROD 219.0        // (mm)
 
   // Distance between bed and nozzle Z home position
   #define DELTA_HEIGHT 250.00             // (mm) Get this value from G33 auto calibrate
@@ -1065,7 +1065,7 @@
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // (mm) Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 105.2              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 103.2              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
@@ -1367,7 +1367,7 @@
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-  #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
+  #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 600, 50 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -1380,7 +1380,7 @@
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 6000, 20000 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -1717,7 +1717,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -10, -3.5 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point
+#define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
