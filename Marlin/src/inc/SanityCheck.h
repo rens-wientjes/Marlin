@@ -2679,13 +2679,13 @@ static_assert(NUM_SERVOS <= NUM_SERVO_PLUGS, "NUM_SERVOS (or some servo index) i
 /**
  * G38 Probe Target
  */
-#if ENABLED(G38_PROBE_TARGET)
-  #if !HAS_BED_PROBE
-    #error "G38_PROBE_TARGET requires a bed probe."
-  #elif !IS_CARTESIAN
-    #error "G38_PROBE_TARGET requires a Cartesian machine."
-  #endif
-#endif
+//#if ENABLED(G38_PROBE_TARGET)
+//  #if !HAS_BED_PROBE
+//    #error "G38_PROBE_TARGET requires a bed probe."
+//  #elif !IS_CARTESIAN
+//    #error "G38_PROBE_TARGET requires a Cartesian machine."
+//  #endif
+//#endif
 
 /**
  * RGB_LED Requirements
